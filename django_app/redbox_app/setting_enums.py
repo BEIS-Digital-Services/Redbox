@@ -17,7 +17,7 @@ class Environment(StrEnum):
     def uses_minio(self) -> bool:
         return self.is_test
 
-    LOCAL = ("LOCAL", True, ["localhost", "127.0.0.1", "0.0.0.0"])  # noqa: S104 nosec: B104: Not in prod
+    LOCAL = ("LOCAL", True, ["localhost", "127.0.0.1", "0.0.0.0", "redbox-dev-external-1073293141.eu-west-2.elb.amazonaws.com"])  # noqa: S104 nosec: B104: Not in prod
     INTEGRATION = ("INTEGRATION", True, ["localhost", "127.0.0.1", "0.0.0.0"])  # noqa: S104 nosec: B104: Not in prod
     DEV = ("DEV", False, ["redbox-dev.ai.cabinetoffice.gov.uk"])
     PREPROD = ("PREPROD", False, ["redbox-preprod.ai.cabinetoffice.gov.uk"])
