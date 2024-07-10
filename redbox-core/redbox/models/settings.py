@@ -208,7 +208,7 @@ class Settings(BaseSettings):
         log.info("Cloud ID = %s", self.elastic.cloud_id)
         log.info("Elastic Cloud API Key = %s", self.elastic.api_key)
 
-        return Elasticsearch(cloud_id=self.elastic.cloud_id, api_key=self.elastic.api_key)
+        return Elasticsearch(self.elastic.cloud_id) #cloud_id=, api_key=self.elastic.api_key
 
     def s3_client(self):
         if self.object_store == "minio":
